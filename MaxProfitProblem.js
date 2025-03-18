@@ -25,7 +25,7 @@ function getMaxProfit(totalTime) {
     // Try each property if there is enough remaining time.
     for (let prop of properties) {
       const finishTime = timeUsed + prop.buildTime;
-      if (finishTime <= totalTime) {
+      if (finishTime < totalTime) {
         // Profit from this property: it earns money for the remaining time units after it is built.
         const profitForThis = (totalTime - finishTime) * prop.earning;
         // Get best outcome from finishTime onward.
